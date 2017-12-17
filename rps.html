@@ -12,21 +12,59 @@
 
  		switch (number) {
  			case 1: 
- 				return "Rock!"
+ 				return 'Rock'
  				break;
  			case 2:
- 				return "Paper!"
+ 				return "Paper"
  				break;
  			case 3:
- 				return "Scissors!"
+ 				return "Scissors"
 		} 
  	}
 
  	function playRound(playerSelection, computerSelection){
 
- 	}
+ 		if (computerSelection == 'Rock'){
+ 			switch (playerSelection){
+ 				case 'rock':
+ 					return 'Draw! Go Again!'
+ 					break;
+ 				case 'paper':
+ 					return 'You Win!'
+ 					break;
+ 				case 'scissors':
+ 					return 'You lose. Try again.'	
+ 			}
+ 		} else if(computerSelection == 'Paper'){
+ 			switch (playerSelection){
+ 				case 'rock':
+ 					return 'You lose. Try again.'
+ 					break;
+ 				case 'paper':
+ 					return 'Draw! Go Again!'
+ 					break;
+ 				case 'scissors':
+ 					return 'You Win!'	
+ 			}
+ 		} else {
+ 			switch (playerSelection){
+ 				case 'rock':
+ 					return 'You Win!'
+ 					break;
+ 				case 'paper':
+ 					return 'You lose. Try again.'
+ 					break;
+ 				case 'scissors':
+ 					return 'Draw! Go Again!'	
+ 			}
+ 		}
 
- 	console.log(computerPlay());
+ 	}
+ 	
+ 	const computerSelection = computerPlay()
+
+ 	console.log(computerSelection)
+ 	console.log(playRound('rock', computerSelection));
 
   </script>
 </body>
