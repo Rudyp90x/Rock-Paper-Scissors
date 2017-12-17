@@ -25,7 +25,7 @@
  	function playRound(playerSelection, computerSelection){
 
  		if (computerSelection == 'Rock'){
- 			switch (playerSelection){
+ 			switch (playerSelection.toLowerCase()){
  				case 'rock':
  					return 'Draw! Go Again!'
  					break;
@@ -36,7 +36,7 @@
  					return 'You lose. Try again.'	
  			}
  		} else if(computerSelection == 'Paper'){
- 			switch (playerSelection){
+ 			switch (playerSelection.toLowerCase()){
  				case 'rock':
  					return 'You lose. Try again.'
  					break;
@@ -47,7 +47,7 @@
  					return 'You Win!'	
  			}
  		} else {
- 			switch (playerSelection){
+ 			switch (playerSelection.toLowerCase()){
  				case 'rock':
  					return 'You Win!'
  					break;
@@ -64,7 +64,7 @@
  	const computerSelection = computerPlay()
 
  	console.log(computerSelection)
- 	console.log(playRound('rock', computerSelection));
+ 	console.log(playRound('paper', computerSelection));
 
   </script>
 </body>
